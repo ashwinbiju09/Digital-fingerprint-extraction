@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Processing</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="relative px-4 py-4 flex justify-between items-center bg-white">
+        <a class="text-xl font-bold leading-none" href="/">
+            <p>Image Processing with Flask</p>
+        </a>
+        <a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200" href="/">Fingerprint extraction</a>
+        <a class="hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200" href="/search">Search Fingerprint</a>
+    </nav>
+    <div class="flex justify-center mt-10 border-2 rounded-md border-black w-1/2 mx-auto p-5">
+        <div class="text-center">
+            <h2 class="text-3xl">Match Fingerprint</h2>
+            <br>
+            <p>Match Percentage: {{ value }}</p>
+            <p>Fingerprint ID: {{ file }}</p>
+        </div>
+    </div>
+</body>
+</html>

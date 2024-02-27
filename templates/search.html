@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Processing</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="relative px-4 py-4 flex justify-between items-center bg-white">
+		<a class="text-xl font-bold leading-none" href="/">
+            <p>Image Processing with Flask</p>
+		</a>
+		<a class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200" href="/">Fingerprint extraction</a>
+		<a class="hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200" href="/process">Search Fingerprint</a>
+	</nav>
+
+    <form action="/search" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".png, .jpg, .jpeg"  class=" block w-2/5  flex mx-auto rounded border border-solid border-neutral-300 text-base font-normal text-neutral-700 transition duration-300 ease-in-out">
+        <br>
+        <button type="submit" class=" flex mx-auto text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-4 py-4">Search for match</button>
+    </form>
+    <!-- {% if error %}
+        <p style="color: red;" class="flex mx-auto">{{ error }}</p>
+    {% endif %} -->
+</body>
+</html>
