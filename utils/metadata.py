@@ -16,6 +16,7 @@ def get_metadata(image_path):
         tagname = TAGS.get(tagid, tagid)
         if tagname == "DateTime":
             date_taken = value
+            print(date_taken)
             break
 
     # Close the image
